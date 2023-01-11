@@ -1,12 +1,15 @@
-package org.example.data_access;
+package org.example.service;
 
 import org.example.model.Student;
 
 import java.util.List;
 
-public interface StudentDao {
+public interface StudentManagement {
+    Student create();
     Student save(Student student);
     Student find(int id);
+    Student remove(int id);
     List<Student> findAll();
-    void delete(int id);
+    Student edit(Student student);
+
 }
